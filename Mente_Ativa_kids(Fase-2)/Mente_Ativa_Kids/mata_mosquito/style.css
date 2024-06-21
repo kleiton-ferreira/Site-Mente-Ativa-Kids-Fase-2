@@ -1,0 +1,125 @@
+body {
+    background-image: url(Imagens/bg.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover; /* Alterado para 'cover' para que a imagem cubra todo o fundo */
+    background-position: center center; /* Centraliza a imagem */
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+}
+
+
+/*ESTILIZAÇÃO DA IMAGEM DO MOSQUITO*/
+
+.mosquito1 {  /*ESTILIZANDO O MOSQUITO DE NÚMERAÇÃO 1*/
+    width: 50px; /*Definindo a largura da imagem com 50px*/
+    height: 50px; /*Definindo a altura da imagem com 50px*/
+}
+
+.mosquito2 {  /*ESTILIZANDO O MOSQUITO DE NÚMERAÇÃO 2*/
+    width: 70px; /*Definindo a largura da imagem com 70px*/
+    height: 70px; /*Definindo a altura da imagem com 70px*/
+}
+
+.mosquito3 {  /*ESTILIZANDO O MOSQUITO DE NÚMERAÇÃO 3*/
+    width: 90px; /*Definindo a largura da imagem com 90px*/
+    height: 90px; /*Definindo a altura da imagem com 90px*/
+}
+
+/*ESTILIZAÇÃO DO LADO ONDE SERÁ EXIBIDO O MOSQUITO*/
+
+.ladoA { /*ESTILIZANDO O MOSQUITO COM A CLASSE LADOA */
+    transform: scaleX(1); /*Fazendo com que a imagem permaneça da mesma maneira, pois já está no lado correto*/
+}
+
+.ladoB { /*ESTILIZANDO O MOSQUITO COM A CLASSE LADOB */
+    transform: scaleX(-1); /*Fazendo com que a imagem seja virada para o outro lado ; */
+}
+
+/*CRIAÇÃO DO CENÁRIO DO JOGO*/
+
+body {
+    background-image: url(Imagens/bg.jpg); /*Imagem do cenário do jogo, que será exibida como imagem de fundo do body ; */
+    background-repeat: no-repeat; /*Fazendo com que a imagem não repita ; */
+    background-size: 100%; /*Fazendo com que a imagem tenha um width de 100* no body ; */
+}
+
+.painel {
+    position: absolute ; /*Definindo a posição como absoluta ; */
+    width: 190px; /*Definindo uma largura fixa de 190px ; */
+    padding: 10px; /*Definindo um preenchimento interno de 10px ; */
+    left: 0px; /*Definindo que a div ficará exatamente a esquerda ;*/
+    bottom: 0px; /*Definindo que ficará extamente no rodapé da página*/
+    border-top: solid 1px #fff; /*Definindo uma borda no topo do elemento*/
+    background-color: #fff; /*Definindo uma cor de fundo*/
+    opacity: 0.7 ; ; /*Definindo que o elemento tenha uma opacidade de 30%*/
+}
+
+.vidas {
+    float: left; /*Definindo que a div flutuará a esquerda* ; */
+}
+
+.cronometro {
+    float: left; /*Definindo que a div flutuará a esquerda ; */
+    font-size: 20px; /*Definindo que a fonte terá um tamanho de 20px ; */
+    font-weight: bold; /*Definindo que o texta será em negrito ; */
+}
+
+/*MUDANDO O CURSOR DO MOUSE*/
+html {
+    cursor: url(Imagens/mata_mosquito.png) 30 30, auto;
+}
+
+/*-----------Botões de Voltar -------------*/
+.back {
+    background-color: #757575; /* Cor de fundo */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    
+  }
+
+  .back:hover {
+    background-color: #3a3a3a;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .restart {
+    background-color: #ff5eff ; /* Cor de fundo */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    
+  }
+
+  .restart:hover {
+    background-color: #ad00adfd ;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /*-------Responsividade----------*/
+
+  @media (max-width: 768px) {
+    body {
+        background-size: cover; /* Ajusta a imagem para completar na tela sem cortar */
+    }
+}
+.container {
+    z-index: 1; /* Garante que o conteúdo fique acima da imagem de fundo */
+}

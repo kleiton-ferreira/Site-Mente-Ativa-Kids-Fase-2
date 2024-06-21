@@ -1,0 +1,55 @@
+<!--animal.html-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mente Ativa Kids</title>
+  <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+  <link rel="stylesheet" href="animal.css"> <!--Estilização customizada-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!--Fonte Roboto-->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!--Fonte Comic Neue-->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!--Fonte Quicksand-->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <!--Baloo 2-->
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> <!--Chewy-->
+  <script src="animal.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <a href="../jogos.html" class="back-button">Voltar</a>
+    <button id="audio-btn" class="audio-button" onclick="toggleAudio()">
+      <audio id="audio" src="audios/intro-animal.mp3"></audio>
+      &#128266;
+    </button>
+    
+    <br><br>
+       
+    <h1>Qual é o Animal?</h1>
+    
+    <div id="question-container">
+      <img id="question-image" src="Imagens/verbinho.jpg" alt="Imagem da questão">
+      <p id="question"></p>
+      <div id="options-container"></div>
+    </div>
+    <p id="score">Pontuação: 0</p>
+    <p id="timer">Tempo restante: <span id="time-left">20</span> segundos</p>
+    <p id="message" class="message">Aqui será exibida a mensagem "Fim do jogo"</p>
+    <button id="start-btn" onclick="startGame()">Iniciar</button>
+    <button id="restart-btn" class="hidden" onclick="restartGame()">Reiniciar</button>
+    
+  </div>
+
+
+  <audio id="correct-sound" src="audios/win.mp3"></audio>
+  <audio id="wrong-sound" src="audios/loss.mp3"></audio>
+  <audio id="victory-sound" src="audios/winner.mp3"></audio>
+  <audio id="victory-sound" src="audios/apalusos.mp3"></audio>
+  
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+/* Estilos gerais */
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+#jogo-titulo {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 30px;
+
+
+}
+
+
+#itens-text {
+
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #130496;
+    font-size: 20px;
+
+
+}
+
+body.memoria {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('imagens/home.png');
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #ff32e0;
+    color: #faf1f1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15pt;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Adicionando transição suave */
+}
+
+button:hover {
+    background-color: #b100a9; /* Cor rosa mais clara no hover */
+    transform: scale(1.1);
+}
+
+
+.stats {
+    color: #FFF;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.board-container {
+    position: relative;
+}
+
+.board,
+.win {
+    border-radius: 5px;
+    box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
+    background: linear-gradient(135deg,  #060416b0 0%,#06049469 0%,#38aaec8f 50%, #fdeff9 100%);
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.board {
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.board-container.flipped .board {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.board-container.flipped .win {
+    transform: rotateY(0) rotateZ(0);
+}
+
+.card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background: #282A3A;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg) rotateZ(50deg);
+    font-size: 28pt;
+    user-select: none;
+    text-align: center;
+    line-height: 100px;
+    background: rgba(253, 248, 230, 0.8); /* Background transparente */
+}
+
+.card.flipped .card-front {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.card.flipped .card-back {
+    transform: rotateY(0) rotateZ(0);
+}
+
+.win {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(253, 248, 230, 0.8); /* Background transparente */
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.win-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21pt;
+    color: #282A3A;
+}
+
+.item-list {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(253, 248, 230, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.items li {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #282A3A;
+}
+
+.item-list {
+
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(253, 248, 230, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 500px;
+
+}
+
+.item-list-outside {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(253, 248, 230, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 500px;
+}
+
+.items-outside {
+    list-style-type: none;
+    padding: 0;
+}
+
+.items-outside li {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #282A3A;
+}
+
+.items-outside li h1 {
+    font-size: 48px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Adicionando estilos para a div que contém a imagem e o áudio */
+.audio-image-container {
+    position: absolute;
+    left: 20px; /* Ajuste a posição conforme necessário */
+    top: 20px; /* Ajuste a posição conforme necessário */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para a imagem pequena */
+.small-image {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a imagem e o áudio */
+}
+
+/* Estilos para o link de voltar à página de jogos */
+.back-to-games {
+    background-color: #727272; /* cinza claro */
+    color: #faf1f1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 0;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15pt;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Adicionando transição suave */
+}
+
+.back-to-games:hover {
+    background-color: #535252; /* Cinza escuro no hover */
+    transform: scale(1.1);
+}
+
+/*---------------Estilo do Botão de Áudio--------------------*/
+.audio-button {
+    background-color: #db6709; /* Cor de fundo */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+  
+  .audio-button:hover {
+    background-color: #a85100;
+  }
+
+
+
+/*---------------------Responsividade------------------------*/
+
+/* Estilos para telas grandes */
+
+ 
+
+    .board-container {
+        margin-left: 20px; /* Espaçamento à esquerda para acomodar os controles */
+    }
+
+    .audio-image-container {
+        position: static; /* Posição padrão para acomodar o layout em linha */
+        margin-right: 20px; /* Espaçamento à direita para acomodar a borda do jogo */
+        
+    }
+
+
+/* Estilos para telas pequenas, como celulares */
+@media (max-width: 1030px) {
+    .game {
+        flex-direction: column; /* Layout em coluna para telas menores */
+    }
+
+    .controls {
+        display: flex; /* Mantém os botões em linha */
+        justify-content: space-between; /* Espaço entre os botões */
+        align-items: center; /* Centraliza os botões verticalmente */
+    }
+
+    .iniciar-button, .back-to-games {
+        padding: 5px 10px; /* Reduz ainda mais o padding para telas menores */
+        font-size: 14pt; /* Reduz ainda mais o tamanho da fonte para telas menores */
+        align-items: center; /* Centraliza os botões verticalmente */
+      
+
+    }
+    /* Responsividade para botões de áudio */
+   
+    
+
+    .board-container {
+        margin-top: 20px; /* Espaçamento acima do tabuleiro para separá-lo dos controles */
+    }
+
+    .audio-image-container {
+        position: static; /* Posição padrão para acomodar o layout em coluna */
+        margin-bottom: 20px; /* Espaçamento abaixo da imagem e do áudio */
+    }
+
+    .item-list,
+    .item-list-outside {
+        display: flex; /* Ativando o layout flexível */
+        flex-direction: column; /* Layout em coluna para telas maiores */
+        max-width: 45%; /* Removendo a largura máxima */
+        width: auto; /* Ajustando a largura automaticamente */
+        height: auto; /* Ajustando a altura automaticamente */
+        position: absolute; /* Mudando para posição absoluta */
+        bottom: 20px; /* Distância do fundo da tela */
+        top: 130%;
+    }
+
+
+
+    @media (max-width: 1030x) {
+        .memoria {
+            flex-direction: column; /* Empilhamento em dispositivos menores */
+            align-items: center; /* Alinha itens à esquerda */
+        }
+    
+        .small-image {
+            max-width: 70px; /* Define a largura máxima da imagem */
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    @media (max-width: 1030px) {
+    
+        #jogo-titulo {
+            font-size: 20px;
+            text-align: center;
+             
+        }
+    }
+
+}

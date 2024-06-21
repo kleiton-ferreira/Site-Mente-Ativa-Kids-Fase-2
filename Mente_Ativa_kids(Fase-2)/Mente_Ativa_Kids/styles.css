@@ -1,0 +1,526 @@
+
+body {
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    
+
+}
+
+
+/*ESTILIZAÇÃO DA BARRA DE NAVEGAÇÃO*/
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #db6709; 
+}
+
+
+.navbar-nav a {
+    font-size: 30px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+
+}
+
+
+/*ESTILIZAÇÃO DO CONTEÚDO*/
+
+section {
+    background: url(none);
+    
+}
+
+/* ESTILIZAÇÃO DO FOOTER */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Opcional: Define a largura total da página */
+    height: 100px;
+    background-color: #f0f0f0; /* Cor de fundo do rodapé */
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+}
+
+footer p {
+    padding-top: 45px; /* Espaçamento entre o conteúdo do rodapé e a borda superior do rodapé */
+}
+
+
+/*ESTILIZAÇÃO DA IMAGEM DA TELA INICIAL E PÁGINA DE JOGOS*/
+
+.verbinho3 {
+    max-width: 350px; /* Para garantir que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Permite que a altura seja ajustada automaticamente mantendo a proporção */
+}
+
+.verbinho2 {
+    max-width: 200px; /* Para garantir que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Permite que a altura seja ajustada automaticamente mantendo a proporção */
+}
+
+
+
+/*ESTILIZAÇÃO DO TÍTULO DA PÁGINA*/
+
+#titulo {
+    font-size: 70px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #db6709;
+   
+}
+
+#nossosJogos {
+    font-size: 40px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #000000;
+
+}
+
+#alfabeto-letras {
+
+    font-size: 40px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #000000;
+
+}
+    
+/*ESTILIZAÇÃO DAS DESCRIÇÕES DOS JOGOS DA PÁGINA INICIAL*/
+
+#memoGame, #mosquitoGame  {
+    font-size: 30px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #4a7deb;
+
+}
+
+#animalGame {
+    font-size: 30px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #eb58f0;
+
+}
+
+#silabasGame {
+    font-size: 30px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #69e643;
+
+}
+
+#velhaGame {
+    font-size: 30px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #db6709;
+
+}
+
+
+.description {
+    font-size: 25px;
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    
+
+}
+
+.card1-background {
+    background-image: url('caminho/para/sua/imagem.jpg');
+    background-size: cover; /* Para cobrir todo o espaço do card */
+    height: 330px;
+    
+}
+
+.card2-background {
+    background-image: url('caminho/para/sua/imagem.jpg');
+    background-size: cover; /* Para cobrir todo o espaço do card */
+    height: 330px;
+}
+
+.card3-background {
+    background-image: url('caminho/para/sua/imagem.jpg');
+    background-size: cover; /* Para cobrir todo o espaço do card */
+    height: 330px;
+}
+/*-------------------------------------------------------------------------*/
+
+
+/*--------------ESTILIZAÇÃO DO QUADRO DAS LETRAS DA PÁGINA INICIAL----------------*/
+
+
+.quadro {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px; /* Largura do quadro */
+    justify-content: space-between; /* Distribui as letras uniformemente */
+    padding: 10px; /* Adiciona um pouco de espaço interno ao redor do quadro */
+    align-items: center;
+  }
+  
+  .letra-container {
+    width: 80px; /* Largura de cada célula do quadro */
+    height: 80px; /* Altura de cada célula do quadro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px; /* Adiciona um espaço de 10px entre cada letra */
+   
+    border: 2px solid #fff; /* Borda branca */
+    box-sizing: border-box; /* A borda faz parte da largura/altura total */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 10px; /* Espaçamento entre as células */
+    background-color: #ffab7a; /* Cor de fundo rosa */
+    transition: background-color 0.3s; /* Transição suave de cor */
+  }
+  
+  .letra {
+    font-size: 36px;
+    color: #fff; /* Cor do texto branco */
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+  }
+  
+  .letra-container:hover {
+    background-color: #f1711c; /* Cor de fundo mais clara no hover */
+  }
+  
+  
+  
+  /*Vogais*/
+  
+  .container-vogal {
+    width: 80px; /* Largura de cada célula do quadro */
+    height: 80px; /* Altura de cada célula do quadro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px; /* Adiciona um espaço de 10px entre cada letra */
+   
+    border: 2px solid #fff; /* Borda branca */
+    box-sizing: border-box; /* A borda faz parte da largura/altura total */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 10px; /* Espaçamento entre as células */
+    background-color: #54c954; /* Cor de fundo rosa */
+    transition: background-color 0.3s; /* Transição suave de cor */
+  }
+  
+  .letra-vogal {
+    font-size: 36px;
+    color: #fff; /* Cor do texto branco */
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+  }
+  
+  .container-vogal:hover {
+    background-color: #108a0c; /* Cor de fundo mais clara no hover */
+  }
+  
+
+/*Vogais*/
+  
+.especial-container {
+    width: 80px; /* Largura de cada célula do quadro */
+    height: 80px; /* Altura de cada célula do quadro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px; /* Adiciona um espaço de 10px entre cada letra */
+   
+    border: 2px solid #fff; /* Borda branca */
+    box-sizing: border-box; /* A borda faz parte da largura/altura total */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 10px; /* Espaçamento entre as células */
+    background-color: #8b4eda; /* Cor de fundo rosa */
+    transition: background-color 0.3s; /* Transição suave de cor */
+  }
+  
+  .letra-especial {
+    font-size: 36px;
+    color: #fff; /* Cor do texto branco */
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+  }
+  
+  .especial-container:hover {
+    background-color: #510c8a; /* Cor de fundo mais clara no hover */
+  }
+
+  .roxo {
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: #8b4eda;
+    
+  }
+
+  .verde {
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: #108a0c;
+    
+  }
+
+  .laranja {
+    font-family: 'Baloo 2','Quicksand','Comic Neue', 'Chewy','Roboto', "Comic Sans MS", cursive, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: #f1711c;
+   
+
+  }
+
+/*-----------------------Botões de áudio---------------------*/
+#play-button {
+    font-size: 20px;
+    background-color: #66b3ff; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 28px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    text-decoration: none; /* Sem sublinhado */
+    display: inline-block; /* Display inline-block */
+    margin: 4px 2px; /* Margem */
+    cursor: pointer; /* Cursor de ponteiro */
+    border-radius: 12px; /* Borda arredondada */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+    outline: none; /* Remove a borda de foco */
+}
+
+#play-button:hover {
+    background-color: #3385ff; /* Cor de fundo ao passar o mouse */
+}
+
+#play-button:focus {
+    outline: none; /* Remove a borda de foco ao clicar */
+}
+
+
+  /* ESTILIZAÇÃO DO QUADRO PARA TELAS PEQUENAS */
+  @media (max-width: 1200px) {
+    .quadro {
+      width: 90%; /* Define a largura do quadro para ocupar 90% da largura da tela */
+      flex-direction: column; /* Coloca as letras em colunas */
+      align-items: center; /* Centraliza as letras horizontalmente */
+    }
+  
+    .letra-container, .container-vogal, .especial-container {
+      width: 90%; /* Largura de cada célula do quadro */
+      max-width: 200px; /* Define a largura máxima de cada célula */
+      margin: 0 auto 10px; /* Centraliza horizontalmente e adiciona espaço inferior */
+
+ 
+      
+    }
+  }
+  
+/*-------------------------------------------------------------------------*/
+
+
+/*-----------------------------Pág Jogos e Bônus---------------------------------*/
+/*Estilo dos Botões*/
+
+
+.memo-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4a7deb; /* Cor de fundo azul para o botão */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none;
+    border-radius: 4px; /* Cantos arredondados */
+    margin-right: 20px; /* Margem à direita para separar os botões */
+    
+}
+
+/* Estilo para o hover*/
+.memo-button:hover {
+    background-color: #0f368a; /* Altere para o azul mais escuro desejado */
+    color: #fff; /* Cor do texto branco */
+}
+
+
+
+.animal-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #eb58f0; /* Cor de fundo rosa para o botão */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none;
+    border-radius: 4px; /* Cantos arredondados */
+    margin-right: 20px; /* Margem à direita para separar os botões */
+    
+}
+
+/* Estilo para o hover*/
+.animal-button:hover {
+    background-color: #b10299; /* Altere para o rosa mais escuro desejado */
+    color: #fff; /* Cor do texto branco */
+}
+
+
+.silabas-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #22b62e; /* Cor de fundo rosa para o botão */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none;
+    border-radius: 4px; /* Cantos arredondados */
+    margin-right: 20px; /* Margem à direita para separar os botões */
+    
+}
+
+/* Estilo para o hover*/
+.silabas-button:hover {
+    background-color: #0f8a1c; /* Altere para o rosa mais escuro desejado */
+    color: #fff; /* Cor do texto branco */
+}
+
+.mosquito-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4a7deb; /* Cor de fundo azul para o botão */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none;
+    border-radius: 4px; /* Cantos arredondados */
+    margin-right: 20px; /* Margem à direita para separar os botões */
+    
+}
+
+/* Estilo para o hover*/
+.mosquito-button:hover {
+    background-color: #0f368a; /* Altere para o azul mais escuro desejado */
+    color: #fff; /* Cor do texto branco */
+}
+
+.velha-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #db6709; /* Cor de fundo azul para o botão */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none;
+    border-radius: 4px; /* Cantos arredondados */
+    margin-right: 20px; /* Margem à direita para separar os botões */
+    
+}
+
+/* Estilo para o hover*/
+.velha-button:hover {
+    background-color: #a85100; /* Altere para o azul mais escuro desejado */
+    color: #fff; /* Cor do texto branco */
+}
+
+
+/* --------------------------Página de Feedback------------------------- */
+
+/* Adiciona o estilo para ocultar a mensagem de confirmação inicialmente */
+#confirmacao {
+    display: none;
+}
+
+/* Estilo para ajustar o layout do formulário e da imagem */
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+textarea {
+    width: 100%;
+    height: 150px; /* Defina a altura desejada */
+    resize: vertical; /* Permitir que o usuário redimensione verticalmente */
+}
+
+input[type="text"],
+        textarea {
+            width: 100%;
+            text-align: justify; /* Justifica o texto dentro dos campos de texto */
+        }
+
+        .mensagem {
+            margin-top: 5px;
+            
+        }
+        
+        .confirmation-box {
+            background-color: #db6709; /* cor verde de fundo */
+            border: 1px solid #a85100; /* borda verde mais escura */
+            color: #ffffff; /* cor do texto */
+            padding: 10px; /* espaço interno */
+            width: 300px; /* largura da caixa */
+            margin: 20px center; /* posiciona à esquerda horizontalmente */
+            text-align: center; /* alinha texto ao centro */
+            border-radius: 5px; /* bordas arredondadas */
+        }
+        
+        .content {
+            overflow: hidden; /* Limpa o float */
+            display: flex; /* Usa flexbox para organizar os elementos */
+            justify-content: center; /* Centraliza os elementos horizontalmente */
+            align-items: center; /* Centraliza os elementos verticalmente */
+        
+        }
+
+        .imageFeedback {
+            max-width: 35%; /* Largura máxima da imagem */
+            max-height: auto;
+        }
+        
+
+/* ESTILIZAÇÃO DO CONTEÚDO DA PÁGINA SOBRE NÓS */
+
+.sobreNos {
+    display: flex; /* Usa o layout de grade flexível */
+    flex-direction:row; /* Define a direção dos itens como coluna */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    padding: 50px; /* Adiciona espaçamento interno ao redor do conteúdo */
+    text-align: justify;
+}
+
+
+.text-sobre {
+    flex: 1; /* O texto ocupará todo o espaço restante */
+    text-align:justify; /* Justifica o texto horizontalmente */
+    max-width: 30%;
+    padding: 50px;
+    font-size:large;
+    
+}
+
+.text-contato {
+    flex: 1; /* O texto ocupará todo o espaço restante */
+    text-align:center; /* Centraliza o texto horizontalmente */
+    max-width: 30%;
+    padding: 50px;
+    font-size:large;
+
+    
+}
+
+.imageContato {
+    max-width: 30%; /* Define a largura máxima da imagem */
+    height: 650px; /* Permite que a altura seja ajustada automaticamente mantendo a proporção */
+    float: right;
+}
+
+.paragrafo {
+    text-indent: 1.25cm; /* Aplica um recuo no início de cada parágrafo que tem a classe 'paragrafo-recuo' */
+    
+}
+
+
+/* Responsividade */
+
+/* Estilo para ajustar o layout responsivo das seções */
+@media (max-width: 768px) {
+    .sobreNos, .content {
+        flex-direction: column; /* Altera a direção dos itens para coluna */
+        align-items: center; /* Centraliza os itens verticalmente */
+        text-align: center; /* Centraliza o texto horizontalmente */
+    }
+
+    .text-sobre, .text-contato, .textFeedback {
+        max-width: 80%; /* Define a largura máxima para o conteúdo */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    .imageContato, .imageFeedback {
+        max-width: 80%; /* Reduz a largura da imagem para caber na tela */
+        margin-top: 20px; /* Adiciona um espaçamento superior para separar a imagem do texto */
+    }
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Ativa Kids</title>
+    <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+    <link rel="stylesheet" href="memo.css"> <!--Estilização customizada-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!--Fonte Roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!--Fonte Comic Neue-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!--Fonte Quicksand-->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <!--Baloo 2-->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> <!--Chewy-->
+    <script src="memo.js" defer></script>
+</head>
+<body class="memoria">
+    <div class="game">
+        <h1></h1><br><br>
+        <div class="audio-image-container">
+            <img src="imagens/verbinho2.png" alt="Descrição da imagem" class="small-image">
+            <!-- Tag de áudio -->
+            <button id="audio-btn" class="audio-button">
+                <audio id="audio" src="audios/intro-memo.mp3"></audio>
+                &#128266;
+            </button>
+        </div>
+        <h1 id="jogo-titulo">Jogo da Memória</h1>
+        <div class="controls">
+            <a href="../jogos.html" class="back-to-games">Voltar</a>
+            <button class="iniciar-button">Iniciar</button>
+            <div class="stats">
+                <div class="item-list">
+                    <h3 id="itens-text">Itens encontrados</h3>
+                    <ul class="items"></ul>
+                </div>
+                <div class="moves">0 movimentos</div>
+                <div class="timer">Tempo: 0 seg</div>
+                <div class="item-list-outside">
+                    <h2 id="itens-text">Clique nas sílabas</h2>
+                    <ul class="items-outside">
+                        <li>🥑 
+                            <span id="a" class="syllable">A -</span>
+                            <span id="ba" class="syllable">ba -</span>
+                            <span id="ca" class="syllable">ca -</span>
+                            <span id="te" class="syllable">te</span>
+                        </li>
+                        <li>🍍 
+                            <span id="a" class="syllable">A -</span>
+                            <span id="ba" class="syllable">ba -</span>
+                            <span id="ca" class="syllable">ca -</span>
+                            <span id="xi" class="syllable">xi</span>
+                        </li>
+                        <li>🍌 
+                            <span id="ba" class="syllable">Ba -</span>
+                            <span id="nan" class="syllable">na -</span>
+                            <span id="na" class="syllable">na</span>
+                        </li>
+                        <li>🥔 
+                            <span id="ba" class="syllable">Ba -</span>
+                            <span id="ta" class="syllable">ta -</span>
+                            <span id="ta" class="syllable">ta</span>
+                        </li>
+                        <li>🥕 
+                            <span id="ce" class="syllable">Ce -</span>
+                            <span id="nou" class="syllable">nou -</span>
+                            <span id="ra" class="syllable">ra</span>
+                        </li>
+                        <li>🍒 
+                            <span id="ce" class="syllable">Ce -</span>
+                            <span id="re" class="syllable">re -</span>
+                            <span id="ja" class="syllable">ja</span>
+                        </li>
+                        <li>🍉 
+                            <span id="me" class="syllable">Me -</span>
+                            <span id="lan" class="syllable">lan -</span>
+                            <span id="ci" class="syllable">ci -</span>
+                            <span id="a2" class="syllable">a</span>
+                        </li>
+                        <li>🌽 
+                            <span id="mi" class="syllable">Mi -</span>
+                            <span id="lho" class="syllable">lho</span>
+                        </li>
+                        <li>🥭 
+                            <span id="man" class="syllable">Man -</span>
+                            <span id="ga" class="syllable">ga</span>
+                        </li>
+                        <li>🍇 
+                            <span id="u" class="syllable">U -</span>
+                            <span id="va" class="syllable">va</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="board-container">
+            <div class="board" data-dimension="4"></div>
+            <div class="win">Você ganhou!</div>
+        </div>
+    </div>
+    <audio id="sound-a" src="audios/A.mp3"></audio>
+    <audio id="sound-ba" src="audios/BA.mp3"></audio>
+    <audio id="sound-ca" src="audios/CA.mp3"></audio>
+    <audio id="sound-te" src="audios/TE.mp3"></audio>
+    <audio id="sound-xi" src="audios/XI.mp3"></audio>
+    <audio id="sound-na" src="audios/NA.mp3"></audio>
+    <audio id="sound-nan" src="audios/NAN.mp3"></audio>
+    <audio id="sound-ta" src="audios/TA.mp3"></audio>
+    <audio id="sound-ce" src="audios/CE.mp3"></audio>
+    <audio id="sound-nou" src="audios/NOU.mp3"></audio>
+    <audio id="sound-ra" src="audios/RA.mp3"></audio>
+    <audio id="sound-re" src="audios/RE.mp3"></audio>
+    <audio id="sound-ja" src="audios/JA.mp3"></audio>
+    <audio id="sound-me" src="audios/ME.mp3"></audio>
+    <audio id="sound-lan" src="audios/LAN.mp3"></audio>
+    <audio id="sound-ci" src="audios/CI.mp3"></audio>
+    <audio id="sound-mi" src="audios/MI.mp3"></audio>
+    <audio id="sound-lho" src="audios/LHO.mp3"></audio>
+    <audio id="sound-man" src="audios/MAN.mp3"></audio>
+    <audio id="sound-ga" src="audios/GA.mp3"></audio>
+    <audio id="sound-u" src="audios/U.mp3"></audio>
+    <audio id="sound-va" src="audios/VA.mp3"></audio>
+    <audio id="sound-re" src="audios/RE.mp3"></audio>
+    <audio id="sound-a2" src="audios/a2.mp3"></audio>
+    <audio id="game-over-sound" src="audios/aplausos.mp3"></audio>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            var syllables = document.querySelectorAll('.syllable');
+            syllables.forEach(function(syllable) {
+                syllable.addEventListener('click', function() { 
+                    var soundId = 'sound-' + this.id;
+                    var audio = document.getElementById(soundId);
+                    if (audio) {
+                        audio.currentTime = 0;
+                        audio.play();
+                    }
+                });
+            });
+        });
+    </script>
+    <audio id="game-over-sound" src="audios/aplausos.mp3"></audio>
+
+
+
+  </body>
+</html>

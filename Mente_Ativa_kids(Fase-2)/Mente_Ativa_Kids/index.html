@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Ativa Kids</title>
+    <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Link do bootstrap-->
+    <link rel="stylesheet" href="styles.css"> <!--Estilização customizada-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!--Fonte Roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!--Fonte Comic Neue-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!--Fonte Quicksand-->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <!--Baloo 2-->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> <!--Chewy-->
+</head>
+<body>
+
+    <header> <!--Início do header-->
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> <!--Início da navegação-->
+
+            <div class="container"> <!--Início do container da navegação-->
+
+                <a href="" class="navbar-brand" > <!--Início do logo da empresa-->
+                    <img src="imagens/capelo.png" alt=""width="100px"> 
+                </a> <!--Fim do logo da empresa-->
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#menuNavegacao">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuNavegacao"> <!--Início do conteúdo da navegação-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="jogos.html" class="nav-link">Jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="feedback.html" class="nav-link">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobreNos.html" class="nav-link">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bonus.html" class="nav-link">Bônus</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim do conteúdo da navegação-->
+            </div> <!--Fim do container da navegação-->
+        </nav> <!--Fim da navegação-->
+    </header> <!--Fim do header-->
+    
+
+    <section> <!--Início da seção do conteúdo principal-->
+        <div class="container"> <!--Início do container da seção principal-->
+            <div class="row text-black pt-5"> <!--Início da linha do conteúdo-->
+                <div class="col-md-6 text-center">
+                
+                    
+                    <h1></h1><br><br><br><br>
+                    <h1 id="titulo"><b>Mente <br>
+                        Ativa Kids</b>
+                </div>
+                <div class="col-md-6"> <!-- Coluna para a imagem -->
+                    <img src="imagens/verbinho3.png" alt="Descrição da imagem" class="img-fluid float-md-center verbinho3">
+                    
+                </div>
+            </div> <!--Fim da linha do conteúdo-->
+        </div> <!--Fim do container da seção principal-->
+
+        <br><br>
+
+        <div class="container">
+            <button id="play-button">
+                <i class="fas fa-play"></i> Play Audio
+            </button>
+            <audio src="audio/audio-inicio.mp3" id="audio"></audio>
+
+            <h2 id="alfabeto-letras"><b>Letras do Alfabeto</b></h2>
+            <br>
+
+        <div class="quadro">
+            <!-- Letras do alfabeto -->
+            <div class="container-vogal"><div class="letra-vogal" data-som="a">A</div><audio id="a-audio" src="letras-alfa/A.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="b">B</div><audio id="b-audio" src="letras-alfa/B.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="c">C</div><audio id="c-audio" src="letras-alfa/C.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="d">D</div><audio id="d-audio" src="letras-alfa/D.mp3"></audio></div>
+            <div class="container-vogal"><div class="letra-vogal" data-som="e">E</div><audio id="e-audio" src="letras-alfa/E.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="f">F</div><audio id="f-audio" src="letras-alfa/F.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="g">G</div><audio id="g-audio" src="letras-alfa/G.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="h">H</div><audio id="h-audio" src="letras-alfa/H.mp3"></audio></div>
+            <div class="container-vogal"><div class="letra-vogal" data-som="i">I</div><audio id="i-audio" src="letras-alfa/I.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="j">J</div><audio id="j-audio" src="letras-alfa/J.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="k">K</div><audio id="k-audio" src="letras-alfa/K.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="l">L</div><audio id="l-audio" src="letras-alfa/L.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="m">M</div><audio id="m-audio" src="letras-alfa/M.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="n">N</div><audio id="n-audio" src="letras-alfa/N.mp3"></audio></div>
+            <div class="container-vogal"><div class="letra-vogal" data-som="o">O</div><audio id="o-audio" src="letras-alfa/O.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="p">P</div><audio id="p-audio" src="letras-alfa/P.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="q">Q</div><audio id="q-audio" src="letras-alfa/Q.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="r">R</div><audio id="r-audio" src="letras-alfa/R.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="s">S</div><audio id="s-audio" src="letras-alfa/S.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="t">T</div><audio id="t-audio" src="letras-alfa/T.mp3"></audio></div>
+            <div class="container-vogal"><div class="letra-vogal" data-som="u">U</div><audio id="u-audio" src="letras-alfa/U.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="v">V</div><audio id="v-audio" src="letras-alfa/V.mp3"></audio></div>
+            <div class="especial-container"><div class="letra-especial" data-som="w">W</div><audio id="w-audio" src="letras-alfa/W.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="x">X</div><audio id="x-audio" src="letras-alfa/X.mp3"></audio></div>
+            <div class="especial-container"><div class="letra-especial" data-som="y">Y</div><audio id="y-audio" src="letras-alfa/Y.mp3"></audio></div>
+            <div class="letra-container"><div class="letra" data-som="z">Z</div><audio id="z-audio" src="letras-alfa/Z.mp3"></audio></div>
+        </div>
+        <br><br>
+         <h2 class="paragrafo" > As letras <span class="roxo">"W"</span> e <span class="roxo">"Y"</span> 
+            são especiais porque, às vezes, fazem o som de uma vogal (como  <span class="verde">"A", "E", "I", "O", "U"</span>). 
+            Outras vezes, fazem o som de uma consoante (como <span class="laranja">"B", "C", "D"...</span>). <br><br>
+
+            <b>Exemplos:</b> <br><br>
+
+            - O <span class="roxo">"Y"</span> em <span class="verde">"yoga"</span> faz o som da vogal <span class="verde">"I"</span>.<br>
+            - O <span class="roxo">"W"</span> em <span class="laranja">"Walter"</span> faz o som da consoante <span class="laranja">"V"</span>. <br><br> 
+            
+            <h2 class="paragrafo" >Assim, essas letras são como camaleões: mudam de acordo com a palavra em que estão!</h2>   
+        </h2>
+        </div>
+
+
+        <br><br><br>
+
+    <div class="container"> <!-- Início do container de jogos principais -->
+        <h2 id="nossosJogos"><b>Nossos Jogos</b></h2>
+        <br>
+        <div class="row"> <!-- Início da linha dos jogos principais -->
+            <div class="col-md-4"> <!-- Início da primeira coluna -->
+                <div class="card w-100 bg-dark text-white text-center card1-background">
+                    <div class="card-header">
+                        <h4 id="memoGame">Jogo da Memória</h4>
+                    </div>
+                    <p></p>
+                    <p class="description">Este é um divertido jogo que você precisa encontrar os pares de imagens iguais. <br> 
+                        Ao final do jogo, você pode clicar nas sílabas para aprender os sons delas.</p>
+                    <div class="card-body">
+                    </div>
+                </div>
+                
+                <h1></h1> <br>
+            </div> <!-- Fim da primeira coluna -->
+
+            <div class="col-md-4"> <!-- Início da segunda coluna -->
+                <div class="card w-100 bg-dark text-white text-center card2-background">
+                    <div class="card-header">
+                        <h4 id="animalGame">Jogo: Qual é o Animal?</h4>
+                    </div>
+                    <p></p>
+                    <p class="description">Neste jogo, o objetivo é acertar os nomes dos animais antes que o tempo acabe. <br>
+                    Cada vez que você acerta, você ganha um ponto. </p> 
+                    <div class="card-body">  
+                    </div>
+                </div>
+                <h1></h1> <br>
+            </div> <!-- Fim da segunda coluna -->
+         
+            <div class="col-md-4"> <!-- Início da terceira coluna -->
+                <div class="card w-100 bg-dark text-white text-center card3-background">
+                    <div class="card-header">
+                        <h4 id="silabasGame">Jogo das Sílabas</h4>
+                    </div>
+                    <p></p>
+                    <p class="description"> Este é um jogo que você pode praticar sua habilidade de formar palavras juntando sílabas corretamente.<br>
+                    A cada acerto, você ganha uma estrela.</p>
+                    <div class="card-body">                       
+                    </div>
+                </div>
+                <h1></h1> <br>
+            </div> <!-- Fim da terceira coluna -->
+            
+        </div> <!-- Fim da linha dos jogos principais -->
+    </div> <!-- Fim do container de jogos principais -->
+</section> <!-- Fim da seção de jogos principais e imagem -->
+
+
+ <br><br><br><br><br>
+
+    <footer class="bg-dark text-white text-center"> <!--Início do footer-->
+        <div class="container"> <!--Início do container do footer-->
+            <div class="row"> <!--Iníico da linha do conteúdo-->
+                <div class="col-md-12">
+                   <p> © 2024 Mente Ativa Kids. Todos os direitos reservados.</p>
+                </div> <!--Fim da linha do conteúdo-->
+            </div>
+        </div> <!--Fim do container do footer-->
+    </footer> <!--Fim do footer-->
+
+    <!-- Adicionando scripts opcionais do Bootstrap (se necessário) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script> <!-- Inclua seu arquivo JavaScript -->
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var letras = document.querySelectorAll(".letra, .letra-vogal, .letra-especial");
+            letras.forEach(function(letra) {
+                letra.addEventListener("mouseover", function() {
+                    var somId = this.getAttribute("data-som") + "-audio";
+                    var audioElement = document.getElementById(somId);
+                    if (audioElement) {
+                        audioElement.currentTime = 0; // Reinicia o áudio
+                        audioElement.play(); // Toca o áudio
+                    }
+                });
+            });
+        });
+    </script>
+  
+
+
+</body>
+</html>

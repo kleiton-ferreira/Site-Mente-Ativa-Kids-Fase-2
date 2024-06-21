@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mente Ativa Kids</title>
+        <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Link do bootstrap-->
+        <link rel="stylesheet" href="styles.css"> <!--Estilização customizada-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!--Fonte Roboto-->
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!--Fonte Comic Neue-->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!--Fonte Quicksand-->
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <!--Baloo 2-->
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> <!--Chewy-->
+    </head>
+
+<body class="feedback-page">
+
+    <header> <!--Início do header-->
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> <!--Início da navegação-->
+
+            <div class="container"> <!--Início do container da navegação-->
+
+                <a href="" class="navbar-brand" > <!--Início do logo da empresa-->
+                    <img src="imagens/capelo.png" alt=""width="100px">
+                </a> <!--Fim do logo da empresa-->
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#menuNavegacao">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuNavegacao"> <!--Início do conteúdo da navegação-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="jogos.html" class="nav-link">Jogos</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="feedback.html" class="nav-link">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobreNos.html" class="nav-link">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bonus.html" class="nav-link">Bônus</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim do conteúdo da navegação-->
+            </div> <!--Fim do container da navegação-->
+        </nav> <!--Fim da navegação-->
+    </header> <!--Fim do header-->
+
+    <div class="content">
+        <div class="textFeedback">
+            <form action="cadastra.php" method="post" id="formulario">
+                <!-- Tag de áudio -->
+                <p></p>
+                <button id="play-button">
+                    <i class="fas fa-play"></i> Play Audio
+                </button>
+                <audio src="audio/audio-feedback.mp3" id="audio"></audio>
+
+                <h2>Feedback</h2>
+                Nome: <input type="text" name="nome"/><br/>
+                Idade: <input type="text" name="idade"/><br/> 
+                E-mail: <input type="text" name="email"/> <br>
+                
+                Mensagem: <br>
+                <textarea name="feedback"></textarea><br/>
+
+                <input type="submit" value="Enviar" />
+                <p></p>
+            </form> 
+            <!-- Mensagem de confirmação -->
+            <div class="confirmation-box" id="confirmacao">Mensagem enviada com sucesso!</div>
+            <p></p>
+        </div> 
+        <img src="imagens/verbinho3.png" alt="Mascote" class="imageFeedback">
+    </div>
+    
+
+    <footer class="bg-dark text-white text-center" id="footer_feedback"> <!--Início do footer-->
+        <div class="container"> <!--Início do container do footer-->
+            <div class="row"> <!--Iníico da linha do conteúdo-->
+                <div class="col-md-12">
+                   <p> © 2024 Mente Ativa Kids. Todos os direitos reservados.</p>
+                </div> <!--Fim da linha do conteúdo-->
+            </div>
+        </div> <!--Fim do container do footer-->
+    </footer> <!--Fim do footer-->
+
+    <!-- Adicionando scripts opcionais do Bootstrap (se necessário) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Script JavaScript para exibir a mensagem de confirmação -->
+    
+    <script>
+        document.getElementById('play-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o envio do formulário ao clicar no botão de play
+    
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            document.getElementById("confirmacao").style.display = "block"; // Exibe a mensagem de confirmação
+            // Adicione aqui o código para enviar os dados do formulário para o PHP e depois resetar o formulário
+            var formData = new FormData(document.getElementById("formulario"));
+            fetch("cadastra.php", {
+                method: "POST",
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById("formulario").reset(); // Reseta o formulário após o envio bem-sucedido
+                }
+            }).catch(error => console.error('Erro ao enviar o formulário:', error));
+        });
+    </script>
+    
+
+
+</body>
+</html>

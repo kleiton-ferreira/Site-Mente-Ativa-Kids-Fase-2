@@ -1,0 +1,198 @@
+/* animal.css */
+
+/* Estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-image: url("Imagens/rosa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 500px;
+    max-height: 750px;
+    height: 750px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    
+  }
+  
+  #question-container {
+    
+    margin-bottom: 20px;
+  }
+  
+  #question-image {
+    width: 350px;
+    height: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  #options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #score {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para as mensagens */
+  .message {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .message.show {
+    display: block;
+    animation: fade-in 1s ease;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos para o botão de reiniciar */
+  .hidden {
+    display: none;
+  }
+  
+  #restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5eff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #restart-btn:hover {
+    background-color: #ad00adfd;
+    
+  }
+  
+  #start-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #start-btn:hover {
+    background-color: #218838;
+
+  }
+  
+  /* Animações para botões */
+  button.pulse {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Estilos adicionais */
+  #timer {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #timer span {
+    color: red;
+  }
+  
+
+  /*-----------Botões de Voltar e Áudio-------------*/
+  .back-button {
+    background-color: #757575; /* Cor de fundo */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Bordas arredondadas */
+    
+  }
+
+  .back-button:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .audio-button {
+    background-color: #db6709; /* Cor de fundo */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+  
+  .audio-button:hover {
+    background-color: #a85100;
+  }

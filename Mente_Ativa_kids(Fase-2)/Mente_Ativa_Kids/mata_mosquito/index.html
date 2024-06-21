@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Ativa Kids</title>
+    <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Link do bootstrap-->
+    <link rel="stylesheet" href="style.css"> <!--Estilização customizada-->
+
+    <script>
+        function iniciarJogo() { // Função criada para selecionar o nível do usuário e começar o jogo ; 
+            let nivel = document.getElementById('nivel').value ; // Recuperando o valor do nível desejado pelo usuário ; 
+            if(nivel === '') { // Validando se o valor do nível está vazio ou não ; 
+                alert("Selecione um nível para iniciar o jogo") ; // Utilizado para alertar o usuário se o o nível desejado estiver vazio ; 
+                return false ; // Usado para que a função seja encerrada caso não exista nenhum valor ; 
+            }
+            window.location.href = "app.html?" + nivel ; // Mudando a página para a página que será executada o jogo ; 
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container"> <!--Início do container-->
+
+        <div class="row"> <!--Início da primeira linha-->
+            <div class="col"> <!--Início da coluna-->
+                <div class="d-flex justify-content-center"> 
+                    <img src="Imagens/game.png" alt="Imagem de vitória">
+                </div>
+            </div> <!--Fim da coluna-->
+        </div> <!--Fim da primeira linha-->
+
+        <div class="row"> <!--Início da segunda linha-->
+            <div class="col"> <!--Início da coluna-->
+                <div class="d-flex justify-content-center"> 
+                    <div class="mb-2">
+                        <select id="nivel" class="form-control">
+                            <option value="">--Selecione o nível--</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Difícil</option>
+                            <option value="chucknorris">Chuck Norris</option>
+                        </select>
+                    </div>
+                </div>
+            </div> <!--Fim da coluna-->
+        </div> <!--Fim da segunda linha-->
+
+        <div class="row"> <!--Início da terceira linha-->
+            <div class="col"> <!--Início da coluna-->
+                <div class="d-flex justify-content-center"> 
+                    <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+                <div>  <a href="../bonus.html" class="back">Voltar</a></div>
+                </div>
+
+            </div> <!--Fim da coluna-->
+        </div> <!--Fim da terceira linha-->
+    
+    </div> <!--Fim do container-->
+</body>
+</html>

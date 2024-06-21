@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Ativa Kids</title>
+    <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onresize="ajustaTamanhoPalcoJogo()">
+    
+    <div class="painel"> <!--Início do painel-->
+        <div class="vidas"> <!--Início do conteúdo de vidas do player-->
+            <img src="Imagens/coracao_cheio.png" alt="Imagem do coração vazio" id="v1">
+            <img src="Imagens/coracao_cheio.png" alt="Imagem do coração cheio" id="v2">
+            <img src="Imagens/coracao_cheio.png" alt="Imagem do coração cheio" id="v3">
+        </div> <!--Fim do conteúdo de vidas do player-->
+        <div class="cronometro"> <!--Início do conteúdo do cronômetro que indicará quando tempo de jogo ainda resta -->
+            Tempo restante : <span id="cronometro"></span>
+        </div> <!--Fim do conteúdo do cronômetro-->
+    </div> <!--Fim do painel-->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background-image: url("imagens/fundo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#hintArea {
+  font-size: 64px; /* tamanho da imagem dica */
+  margin: 5px 0;
+}
+
+#gameContainer {
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 25px; /* Espaçamento interno maior */
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
+  background: linear-gradient(135deg, #a5ee9e3a, #1cdd466b, #a5ee9e6e);
+  margin-bottom: 30px;
+  max-height: 600;
+  height: 600px;
+}
+
+#syllablesContainer, #wordFormationArea {
+  border: 3px dashed #2e990d;
+  background-color: #fdfdfd;
+  margin: 15px 0;
+  padding: 20px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  width: 90%;
+}
+
+#syllablesContainer div, #wordFormationArea div {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #ffdfd3;
+  color: #5e6472;
+  border: 2px solid #ffc7c7;
+  border-radius: 10px;
+  cursor: grab;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transição para sombra */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#syllablesContainer div:hover, #wordFormationArea div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao hover */
+}
+
+#score {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #8d99ae;
+  font-size: 1.5rem;
+}
+
+#messageArea {
+  color: #4a4e69;
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+#restartArea {
+  display: none;
+  margin-top: 20px;
+}
+
+#restartButton {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #ffb7b2;
+  color: #3d405b;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#restartButton:hover {
+  background-color: #f4acb7;
+  transform: scale(1.05);
+}
+
+/*-----------Botões de Voltar e Áudio-------------*/
+.back-button {
+  background-color: #757575; /* Cor de fundo */
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.back-button:hover {
+  background-color: #3a3a3a;
+}
+
+.audio-button {
+  background-color: #db6709; /* Cor de fundo */
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.audio-button:hover {
+  background-color: #a85100;
+}
+
+.verbinho3 {
+  max-width: 150px;
+  height: 150px;
+  margin-top: 40px;
+}
+
+.red-text {
+  color: red;
+}
+
+.yellow-text {
+  color: yellow;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para dispositivos móveis até 480px */
+@media (max-width: 480px) {
+  #hintArea {
+    font-size: 24px;
+  }
+
+  #syllablesContainer, #wordFormationArea {
+    padding: 10px;
+  }
+
+  #syllablesContainer div, #wordFormationArea div {
+    padding: 6px 10px;
+    margin: 3px;
+    font-size: 16px;
+  }
+
+  #restartButton {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .back-button, .audio-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Para tablets e telas pequenas até 768px */
+@media (max-width: 768px) {
+  #hintArea {
+    font-size: 36px;
+  }
+
+  .verbinho3 {
+    max-width: 110px;
+    height: 110px;
+    margin-top: 40px;
+  }
+
+  #gameContainer {
+    padding: 15px;
+  }
+
+  #syllablesContainer div, #wordFormationArea div {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 20px;
+  }
+
+  #restartButton {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .back-button, .audio-button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Para notebooks até 1024px */
+@media (max-width: 1024px) {
+  #hintArea {
+    font-size: 48px;
+  }
+
+  .verbinho3 {
+    max-width: 140px;
+    height: 140px;
+  }
+
+  #gameContainer {
+    padding: 20px;
+  }
+
+  #syllablesContainer div, #wordFormationArea div {
+    padding: 10px 15px;
+    margin: 8px;
+    font-size: 24px;
+  }
+
+  #restartButton {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+
+  .back-button, .audio-button {
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+}
+
+/* Para telas grandes acima de 1024px */
+@media (min-width: 1025px) {
+  #hintArea {
+    font-size: 64px;
+  }
+
+  .verbinho3 {
+    max-width: 150px;
+    height: 150px;
+  }
+
+  #gameContainer {
+    padding: 25px;
+  }
+
+  #syllablesContainer div, #wordFormationArea div {
+    padding: 12px 18px;
+    margin: 10px;
+    font-size: 30px;
+  }
+
+  #restartButton {
+    padding: 15px 30px;
+    font-size: 1.2em;
+  }
+
+  .back-button, .audio-button {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+}

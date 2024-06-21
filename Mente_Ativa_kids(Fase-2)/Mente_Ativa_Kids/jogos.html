@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mente Ativa Kids</title>
+        <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Link do bootstrap-->
+        <link rel="stylesheet" href="styles.css"> <!--Estilização customizada-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!--Fonte Roboto-->
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!--Fonte Comic Neue-->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!--Fonte Quicksand-->
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <!--Baloo 2-->
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> <!--Chewy-->
+    </head>
+<body>
+
+    <header> <!--Início do header-->
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> <!--Início da navegação-->
+
+            <div class="container"> <!--Início do container da navegação-->
+
+                <a href="" class="navbar-brand" > <!--Início do logo da empresa-->
+                    <img src="imagens/capelo.png" alt=""width="100px"> 
+                </a> <!--Fim do logo da empresa-->
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#menuNavegacao">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuNavegacao"> <!--Início do conteúdo da navegação-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Início</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="jogos.html" class="nav-link">Jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="feedback.html" class="nav-link">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobreNos.html" class="nav-link">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bonus.html" class="nav-link">Bônus</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim do conteúdo da navegação-->
+            </div> <!--Fim do container da navegação-->
+        </nav> <!--Fim da navegação-->
+    </header> <!--Fim do header-->
+    
+
+    <section> <!--Início da seção do conteúdo principal-->
+        <div class="container"> <!--Início do container da seção principal-->
+            <div class="row text-black pt-5"> <!--Início da linha do conteúdo-->
+                <div class="col-md-6 text-center">
+                    <h1></h1><br><br>
+                    <!-- Botão e tag de áudio -->
+                    <button id="play-button">
+                        <i class="fas fa-play"></i> Play Audio
+                    </button>
+                    <audio src="audio/audio-jogo.mp3" id="audio"></audio>
+                    <h1 id="titulo"><b>JOGOS</b></h1><br><br>
+                </div>
+                
+                <div class="col-md-6"> <!-- Coluna para a imagem -->
+                    <img src="imagens/verbinho3.png" alt="Descrição da imagem" class="img-fluid float-md-center verbinho2">
+                    <p></p> <br>
+                </div>
+            </div> <!--Fim da linha do conteúdo-->
+        </div> <!--Fim do container da seção principal-->
+
+    <div class="container"> <!-- Início do container de jogos principais -->
+        <div class="row"> <!-- Início da linha dos jogos principais -->
+            <div class="col-md-4"> <!-- Início da primeira coluna -->
+                <div class="card w-100 bg-dark text-white text-center">
+                    <div class="card-header">
+                        <h4 id="memoGame">Jogo da Memória</h4>
+                    </div>
+                    <img src="Imagens Jogos/jogo-memoria.png" alt="Jogo da Memória">
+                    <div class="card-body">
+                        <a href="Jogo_memo/memo.html" class="btn btn-light memo-button">Jogar agora</a>
+                    </div>
+                </div>
+                <h1></h1> <br>
+            </div> <!-- Fim da primeira coluna -->
+          
+
+            <div class="col-md-4"> <!-- Início da segunda coluna -->
+                <div class="card w-100 bg-dark text-white text-center">
+                    <div class="card-header">
+                        <h4 id="animalGame">Qual é o Animal?</h4>
+                    </div>
+                    <img src="Imagens Jogos/jogo-animais.png" alt="">
+                    <div class="card-body">
+                        <a href="jogo_animais/animal.html" class="btn btn-light animal-button">Jogar agora</a>
+                    </div>
+                </div>
+                <h1></h1> <br>
+            </div> <!-- Fim da segunda coluna -->
+         
+            <div class="col-md-4"> <!-- Início da terceira coluna -->
+                <div class="card w-100 bg-dark text-white text-center">
+                    <div class="card-header">
+                        <h4 id="silabasGame">Jogo das Sílabas</h4>
+                    </div>
+                    <img src="Imagens Jogos/jogo-silabas.png" alt="">
+                    <div class="card-body">
+                        <a href="jogo_silabas/silabas.html" class="btn btn-light silabas-button">Jogar agora</a>
+                    </div>
+                </div>
+                <h1></h1> <br>
+            </div> <!-- Fim da terceira coluna -->
+            
+        </div> <!-- Fim da linha dos jogos principais -->
+    </div> <!-- Fim do container de jogos principais -->
+</section> <!-- Fim da seção de jogos principais e imagem -->
+
+<br><br><br><br><br>
+
+    <footer class="bg-dark text-white text-center"> <!--Início do footer-->
+        <div class="container"> <!--Início do container do footer-->
+            <div class="row"> <!--Iníico da linha do conteúdo-->
+                <div class="col-md-12">
+                   <p> © 2024 Mente Ativa Kids. Todos os direitos reservados.</p>
+                </div> <!--Fim da linha do conteúdo-->
+            </div>
+        </div> <!--Fim do container do footer-->
+    </footer> <!--Fim do footer-->
+
+    <!-- Adicionando scripts opcionais do Bootstrap (se necessário) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+
+       
+    </script>
+
+
+</body>
+</html>

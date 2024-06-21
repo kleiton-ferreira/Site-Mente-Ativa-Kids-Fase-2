@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Ativa Kids</title>
+    <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onclick="playAudio()">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img src="Imagens/game_over.png" alt="Imagem de game over">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="restart" onclick="window.location.href='index.html'">Reiniciar</button>
+                    <a href="../bonus.html" class="back">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Adicionando o áudio com autoplay -->
+ <audio id="derrota-audio" src="audios/derrota.mp3" autoplay></audio>
+
+ <script>
+     // Função para reproduzir o áudio
+     function playAudio() {
+         var audio = document.getElementById("derrota-audio");
+         audio.play();
+         // Remover o evento de clique após a reprodução do áudio para evitar repetições
+         document.body.removeEventListener("click", playAudio);
+     }
+ </script>
+
+
+</body>
+</html>

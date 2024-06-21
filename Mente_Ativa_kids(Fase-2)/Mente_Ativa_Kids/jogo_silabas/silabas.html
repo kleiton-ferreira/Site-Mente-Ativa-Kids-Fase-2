@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Ativa Kids</title>
+    <link rel="shortcut icon" href="imagens/capelo.png" type="image/x-icon">
+    <link rel="stylesheet" href="silabas.css"> <!--Estilização customizada-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!--Fonte Roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!--Fonte Comic Neue-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!--Fonte Quicksand-->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <!--Baloo 2-->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> <!--Chewy-->
+    <script src="silabas.js" defer></script>
+</head>
+<body>
+    <div> 
+        <a href="../jogos.html" class="back-button">Voltar</a>
+        <button id="audio-btn" class="audio-button" onclick="toggleAudio()">
+            <audio id="audio" src="audios/intro-silabas.mp3"></audio>
+            &#128266;
+        </button>
+        <img src="imagens/verbinho3.png" alt="Descrição da imagem" class="verbinho3">
+    </div>
+    <br>
+    <div id="gameContainer">
+        <div id="hintArea"></div>
+        <div id="syllablesContainer">
+            <!-- Sílabas serão geradas dinamicamente aqui -->
+        </div>
+        <div id="wordFormationArea">
+            <!-- Área onde as palavras serão formadas -->
+        </div>
+        <div id="score">Estrelas: <span id="starRating">☆☆☆☆☆☆☆☆☆☆</span></div>
+        <div id="messageArea"></div>
+        <div id="restartArea" style="display: none;">
+            <button id="restartButton">Jogar Novamente</button>
+        </div>
+    </div>
+    <!-- Elementos de áudio -->
+    <audio id="audio-acerto" src="audios/win.mp3"></audio>
+    <audio id="audio-erro" src="audios/loss.mp3"></audio>
+    <audio id="audio-winner" src="audios/winner.mp3"></audio>
+</body>
+</html>
